@@ -7,6 +7,15 @@ table, th, td{
     border: 1px solid black;
 }
 
+
+/* .main-table{
+    border: 2px solid ;
+}
+*/
+.nested-table{
+    width: 100%;
+} 
+
 td{
     padding: 8px;
 }
