@@ -1,7 +1,10 @@
 table {
     text-align: center;
-    border-spacing: 3px;
-    
+    border-spacing: 3px;   
+}
+
+table, th, td{
+    border: 1px solid black;
 }
 
 td{
