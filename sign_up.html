@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign up</title>
+</head>
+
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Cars</a></li>
+            <li><a href="./body_styles.html">Car Body Styles</a></li>
+            <li><a href="./engines.html">Engines</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./sign_up.html">Sign up</a></li>
+        </ul>
+    </nav>
+
+    <a href="./user_details.html">Already have an account?</a>
+
+    <section>
+        <h1>Create account</h1>
+        <!-- on is default -->
+        <form action="#" method="POST" autocomplete="on">
+            <div class="form-elem">
+                <label for="first-name">First Name:</label>
+                <input type="text" name="first-name" autofocus>
+                <label for="first-name">np. Jan</label>
+            </div>
+            <div class="form-elem">
+                <label for="last-name">Last Name: </label>
+                <input type="text" id="last-name" name="last-name" required>
+                <label for="last-name">np. Kowalski</label>
+            </div>
+            <div class="form-elem">
+                <label for="month">Month: </label>
+                <input list="months" id="month" name="month">
+                <datalist id="months">
+                    <option value="January">
+                    <option value="February">
+                    <option value="March">
+                    <option value="April">
+                    <option value="May">
+                    <option value="June">
+                    <option value="July">
+                    <option value="August">
+                    <option value="September">
+                    <option value="October">
+                    <option value="November">
+                    <option value="December">
+                </datalist>
+                <label for="month">np. January</label>
+            </div>
+            <div class="form-elem">
+                <label for="mail">Mail: </label>
+                <input type="email" id="mail" name="mail" required>
+                <label for="mail">np. jan@kowalski.pl</label>
+            </div>
+            <div class="form-elem">
+                <label for="tel">Tel: </label>
+                <input type="tel" id="tel" name="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" title="You are allowed to enter numbers only. 
+                You must enter 9 numbers, spaces after three numbers are required">
+                <label for="tel">np. 123 456 789</label>
+            </div>
+            <div class="form-elem form-buttons">
+                <input type="submit" value="Send">
+                <input type="reset" value="Reset">
+            </div>
+
+
+        </form>
+    </section>
+    <footer>All rights reserved &copy;</footer>
+
+</body>
+
+</html>

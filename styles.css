@@ -8,6 +8,25 @@ table, th, td{
 }
 
 
+.form-elem label:first-child{
+    display: block;
+    margin: 10px 0px;
+}
+
+.form-elem label:last-child{
+    margin-left: 20px;
+}
+
+.form-buttons{
+    margin-top: 20px;
+}
+
+/* form label{
+    display: block;
+    margin: 2px;
+} */
+
+
 /* .main-table{
     border: 2px solid ;
 }
