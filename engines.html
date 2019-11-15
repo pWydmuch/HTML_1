@@ -15,12 +15,9 @@
             background-size: contain;
             background-position: center;
             background-repeat: repeat-x;
-            background-attachment: fixed;
-        }
-
+        }   
         body>table,
         details {
-
             margin: auto;
             margin-top: 20px;
             width: 50%;
@@ -28,31 +25,45 @@
             padding-bottom: 10px;
             border: green dashed 1.0px
         }
-
-        tr table thead{
-            background: red;
-        }
-
-        table {
-            background-color: white;
-    
-        }
-
-        h5 {
-            font-size: 1.2em;
-            font-weight: 700;
-
-        }
     </style>
 </head>
 
 <body>
     <nav>
-        <ul>
+        <ul class="menu">
             <li><a href="./index.html">Cars</a></li>
-            <li><a href="./body_styles.html">Car Body Styles</a></li>
-            <li><a href="./engines.html">Engines</a></li>
-            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./body_styles.html">Car Body Styles</a>
+                <ul>
+                    <li><a href="./body_styles.html#Wagon">Wagon</a>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./body_styles.html#Sedan">Sedan</a>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="./engines.html">Engines</a>
+                <ul>
+                    <li><a href="#">Diesel</a></li>
+                    <li><a href="#">Gasoline</a></li>
+                    <li><a href="#">Hybrid</a></li>
+                </ul>
+            </li>
+            <li><a href="./contact.html">Contact Us</a>
+                <ul>
+                    <li><a href="#">Tel</a></li>
+                    <li><a href="#">Fax</a></li>
+                    <li><a href="#">Mail</a></li>
+                </ul>
+            </li>
             <li><a href="./sign_up.html">Sign up</a></li>
         </ul>
     </nav>
