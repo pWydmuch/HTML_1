@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="pl">
-<!-- to ma byc na GitHubie -->
-<!-- Zrob link do #cosNaStronie, o to chodzi w linku do etykiety -->
 
 <head>
     <meta charset="UTF-8">
@@ -12,16 +10,52 @@
     <link rel="stylesheet" href="styles.css">
     <title>Used car dealer</title>
 </head>
+
 <body>
+        
+
     <nav>
-        <ul>
-                <li><a href="./index.html">Cars</a></li>
-                <li><a href="./body_styles.html">Car Body Styles</a></li>
-                <li><a href="./engines.html">Engines</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-                <li><a href="./sign_up.html">Sign up</a></li>
+        <ul class="menu">
+            <li><a href="./index.html">Cars</a></li>
+            <li><a href="./body_styles.html">Car Body Styles</a>
+                <ul>
+                    <li><a href="./body_styles.html#Wagon">Wagon</a>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./body_styles.html#Sedan">Sedan</a>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="./engines.html">Engines</a>
+                <ul>
+                    <li><a href="#">Diesel</a></li>
+                    <li><a href="#">Gasoline</a></li>
+                    <li><a href="#">Hybrid</a></li>
+                </ul>
+            </li>
+            <li><a href="./contact.html">Contact Us</a>
+                <ul>
+                    <li><a href="#">Tel</a></li>
+                    <li><a href="#">Fax</a></li>
+                    <li><a href="#">Mail</a></li>
+                </ul>
+            </li>
+            <li><a href="./sign_up.html">Sign up</a></li>
         </ul>
     </nav>
+
+    
+    <p></p>
+
     <main>
         <h1>Cars</h1>
         <section>
@@ -30,13 +64,13 @@
                 <p>Select <b>engine</b> type</p>
                 <input type="radio" name="engine" id="diesel" value="diesel">
                 <label for="diesel">Diesel</label>
-              
+
                 <input type="radio" name="engine" id="gasoline" value="gasoline">
                 <label for="diesel">Gasoline</label>
-               
+
                 <input type="radio" name="engine" id="electric" value="electric">
                 <label for="diesel">Electric</label>
-                
+
                 <p>Select additional equipment</p>
                 <input type="checkbox" name="ABS" id="ABS" value="true">
                 <label for="ABS">ABS</label>
@@ -44,7 +78,7 @@
                 <label for="AC">Air conditioning</label>
                 <input type="checkbox" name="sunroof" id="sunroof" value="true">
                 <label for="sunroof">Sunroof</label>
-               
+
                 <p>Select car brand</p>
                 <select>
                     <optgroup label="Swedish Cars">
@@ -57,7 +91,7 @@
                         <option value="volksvagen">Volksvagen</option>
                     </optgroup>
                 </select>
-        
+
                 <input type="reset" value="Reset">
                 <input type="submit" value="Search">
             </form>
@@ -68,7 +102,7 @@
                 Best used car dealer in this town
             </article>
             <article>
-                I have owned a car bought here for 10 years. 
+                I have owned a car bought here for 10 years.
             </article>
         </section>
         <section>
