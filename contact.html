@@ -10,17 +10,52 @@
     <link rel="stylesheet" href="styles.css">
     <title>Contact us</title>
     <style>
+        @-webkit-keyframes example {
+            0% {
+                background-image: radial-gradient(circle, red, yellow, green);
+            }
 
-            @keyframes example {
-                0%   {background-image: radial-gradient(circle, red, yellow, green);}
-                25%  {background-image: radial-gradient(circle, green, red, yellow);}
-                50%  {background-image: radial-gradient(circle, yellow, green, red);}
-                100% {background-image: radial-gradient(circle, red, yellow, green);}
-              }
+            25% {
+                background-image: radial-gradient(circle, green, red, yellow);
+            }
+
+            50% {
+                background-image: radial-gradient(circle, yellow, green, red);
+            }
+
+            100% {
+                background-image: radial-gradient(circle, red, yellow, green);
+            }
+        }
+
+        @keyframes example {
+            0% {
+                background-image: -o-radial-gradient(circle, red, yellow, green);
+                background-image: radial-gradient(circle, red, yellow, green);
+            }
+
+            25% {
+                background-image: -o-radial-gradient(circle, green, red, yellow);
+                background-image: radial-gradient(circle, green, red, yellow);
+            }
+
+            50% {
+                background-image: -o-radial-gradient(circle, yellow, green, red);
+                background-image: radial-gradient(circle, yellow, green, red);
+            }
+
+            100% {
+                background-image: -o-radial-gradient(circle, red, yellow, green);
+                background-image: radial-gradient(circle, red, yellow, green);
+            }
+        }
 
         body {
+            background-image: -o-radial-gradient(circle, red, yellow, green);
             background-image: radial-gradient(circle, red, yellow, green);
+            -webkit-animation-name: example;
             animation-name: example;
+            -webkit-animation-duration: 2s;
             animation-duration: 2s;
         }
 
