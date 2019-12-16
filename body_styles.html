@@ -9,6 +9,8 @@
         content="Short description of car body styles available, such as combi, hetchback, sedan etc">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
+    <script src="zad3.js" defer></script>
+    <script src="zad2.js" defer></script>
     <title>Car body styles</title>
 </head>
 
@@ -65,6 +67,25 @@
                 <li><a href="#Cabriolet">Cabriolet</a></li>
             </ul>
         </section>
+
+        <label for="my-color">Background color:</label>
+        <input id="my-color" type="color" name="color">
+        <button id="btn-confirm">Confirm</button>
+
+        <label for="my-color-font">Font color:</label>
+        <input id="my-color-font" type="color" name="color">
+        <button id="btn-confirm-font">Confirm</button>
+        <br>
+        <label>Choose font family:
+            <select class="font-fam" name="font-fam">
+                <option value="arial">Arial</option>
+                <option value="monospace">Monospace</option>
+                <option value="georgia">Georgia</option>
+            </select>
+        </label>
+        <br>
+        <button onclick="processLinks()">Paint links black</button>
+        <button onclick="processImages()">Process images</button>
         <article>
 
             <h2>Cars are produced in many body styles</h2>
@@ -116,7 +137,7 @@
                             <h4>Sedan</h4>
                             <figure>
                                 <a href="https://en.wikipedia.org/wiki/Sedan_(automobile)" target="_blank">
-                                    <img class="image2" src="img/sedan.svg.png" alt="sedan" width="300">
+                                    <img class="image2" id='image2' src="img/sedan.svg.png" alt="sedan" width="300">
                                 </a>
                                 <figcaption>Sedan style</figcaption>
                             </figure>

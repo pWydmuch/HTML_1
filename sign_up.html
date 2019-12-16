@@ -8,6 +8,8 @@
     <meta name="description" content="Site that enables to sign up">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
+    <!-- <script src="zad5.js" defer></script> -->
+    <!-- <script src="zad2.js" defer></script> -->
     <title>Sign up</title>
 </head>
 
@@ -58,15 +60,15 @@
     <section>
         <h1>Create account</h1>
         <!-- on is default -->
-        <form action="#" method="POST" autocomplete="on">
+        <form name="additional" action="sign.php" method="POST" autocomplete="on">
             <div class="form-elem">
                 <label for="first-name">First Name:</label>
-                <input type="text" name="first-name" autofocus>
+                <input type="text" id="first-name" name="first-name">
                 <label for="first-name">np. Jan</label>
             </div>
             <div class="form-elem">
                 <label for="last-name">Last Name: </label>
-                <input type="text" id="last-name" name="last-name" required>
+                <input type="text" id="last-name" name="last-name">
                 <label for="last-name">np. Kowalski</label>
             </div>
             <div class="form-elem">
@@ -90,13 +92,13 @@
             </div>
             <div class="form-elem">
                 <label for="mail">Mail: </label>
-                <input type="email" id="mail" name="mail" required>
+                <input type="email" name='email' id="mail" name="mail">
                 <label for="mail">np. jan@kowalski.pl</label>
             </div>
             <div class="form-elem">
                 <label for="tel">Tel: </label>
-                <input type="tel" id="tel" name="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" title="You are allowed to enter numbers only. 
-                You must enter 9 numbers, spaces after three numbers are required" disabled>
+                <input type="tel" id="tel" name="tel"  title="You are allowed to enter numbers only. 
+                You must enter 9 numbers, spaces after three numbers are required">
                 <label for="tel">np. 123 456 789</label>
             </div>
             <div class="form-elem form-buttons">
@@ -106,6 +108,8 @@
 
 
         </form>
+        <button onclick="processForms()">Add placeholder</button>
+        <p id="helpText"></p>
     </section>
     <footer>All rights reserved &copy;</footer>
 

@@ -8,9 +8,14 @@
     <meta name="description" content="Site that displays account's details">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
-    <!-- <script src="main.js"></script> -->
+  <!-- <script src="zad1.js"></script>  -->
     <title>Calculator</title>
     <style>
+            canvas {
+                border: 1px solid black;
+                width: 560px;
+                height: 360px;
+              }
         section {
             margin-top: 60px;
         }
@@ -20,7 +25,7 @@
             flex-direction: column;
         }
     </style>
-
+    <!-- {% comment %} <script src="zad4.js" defer></script> {% endcomment %} -->
 </head>
 
 <body>
@@ -66,7 +71,7 @@
         <script>
             document.writeln("Calculator")
         </script>
-        <form id="count" action="#" method="POST">
+        <form id="count" action="calc.php" method="POST">
             <div>
                 <p>Select math operation</p>
                 <input type="radio" name="op" id="add" value="add" checked>
@@ -84,12 +89,12 @@
 
             <div>
                 <label for="fnum">First number</label>
-                <input type="text" name="op" id="fnum">
+                <input type="text" name="fnum" id="fnum">
                 <button id="fran">Draw first number</button>
             </div>
             <div>
                 <label for="snum">Second number</label>
-                <input type="text" name="op" id="snum">
+                <input type="text" name="snum" id="snum">
                 <button id="sran">Draw second number</button>
             </div>
             <input type="submit" value="Count">
@@ -103,8 +108,14 @@
 
         <div id="prev"></div>
     </section>
-
-    <script>
+    {% comment %} <canvas id="draw" width="560" height="360"></canvas>
+    <div id="dom"></div>
+    <button onclick="append()">Append paragraph</button>
+    <button onclick="insert()">Insert paragraph</button>
+    <button onclick="remove()">Remove paragraph</button>
+    <button onclick="replace()">Replace paragraph</button> {% endcomment %}
+<!-- 
+    {% comment %} <script>
         let fnum
         let snum
         let result = 0
@@ -197,7 +208,7 @@
             res.innerHTML = `<p>Result: ${result}</p>`
 
         }
-    </script>
+    </script> {% endcomment %} -->
 </body>
 
 </html>     
