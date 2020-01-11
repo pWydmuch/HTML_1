@@ -5,20 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="cars, car body styles, wagon, hetchback, sedan ">
-    <meta name="description"
-        content="Short description of car body styles available, such as combi, hetchback, sedan etc">
+    <meta name="description" content="Short description of car body styles available, such as combi, hetchback, sedan etc">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
-    <script src="zad3.js" defer></script>
-    <script src="zad2.js" defer></script>
+    <link rel="stylesheet" href="cookie-style.php">
+    <!-- <script src="zad3.js" defer></script> -->
+    <!-- <script src="zad2.js" defer></script> -->
     <title>Car body styles</title>
+    <!-- <style>
+        body{
+            background-color: <?php print($_COOKIE['back-col']);?>;
+            color: <?php print($_COOKIE['color']);?>;    
+            font-family: <?php print($_COOKIE['font-fam']);?>    
+        }
+    </style> -->
 </head>
 
 <body>
-    <nav>
+<nav>
         <ul class="menu">
-            <li><a href="./index.html">Cars</a></li>
-            <li><a href="./body_styles.html">Car Body Styles</a>
+            <li><a href="./index.php">Cars</a></li>
+            <li><a href="./body_styles.php">Car Body Styles</a>
                 <ul>
                     <li><a href="./body_styles.html#Wagon">Wagon</a>
                         <ul>
@@ -36,21 +43,22 @@
                     </li>
                 </ul>
             </li>
-            <li><a href="./engines.html">Engines</a>
+            <li><a href="./engines.php">Engines</a>
                 <ul>
                     <li><a href="#">Diesel</a></li>
                     <li><a href="#">Gasoline</a></li>
                     <li><a href="#">Hybrid</a></li>
                 </ul>
             </li>
-            <li><a href="./contact.html">Contact Us</a>
+            <li><a href="./contact.php">Contact Us</a>
                 <ul>
                     <li><a href="#">Tel</a></li>
                     <li><a href="#">Fax</a></li>
                     <li><a href="#">Mail</a></li>
                 </ul>
             </li>
-            <li><a href="./sign_up.html">Sign up</a></li>
+            <li><a href="./loguj.php">Log in</a></li>
+            <li><a href="./cookie.php">Cookie</a></li>
         </ul>
     </nav>
 
@@ -58,6 +66,7 @@
 
     <div class="sign">Top fixed</div>
     <main>
+      
         <section id="body-styles-nav">
             <h3>Go to</h3>
             <ul>
@@ -67,25 +76,28 @@
                 <li><a href="#Cabriolet">Cabriolet</a></li>
             </ul>
         </section>
-
-        <label for="my-color">Background color:</label>
-        <input id="my-color" type="color" name="color">
-        <button id="btn-confirm">Confirm</button>
-
-        <label for="my-color-font">Font color:</label>
-        <input id="my-color-font" type="color" name="color">
-        <button id="btn-confirm-font">Confirm</button>
+   
+        <form name="additional" action="ustaw.php" method="POST">
+            <label for="my-color">Background color:</label>
+            <input id="my-color" type="color" name="back-color">
+        
+            <br>
+            <label for="my-color-font">Font color:</label>
+            <input id="my-color-font" type="color" name="color">
+    
+            <br>
+            <label>Choose font family:
+                <select class="font-fam" name="font-fam">
+                    <option value="arial">Arial</option>
+                    <option value="monospace">Monospace</option>
+                    <option value="georgia">Georgia</option>
+                </select>
+            </label>
+            <input type="submit">
+        </form>
         <br>
-        <label>Choose font family:
-            <select class="font-fam" name="font-fam">
-                <option value="arial">Arial</option>
-                <option value="monospace">Monospace</option>
-                <option value="georgia">Georgia</option>
-            </select>
-        </label>
-        <br>
-        <button onclick="processLinks()">Paint links black</button>
-        <button onclick="processImages()">Process images</button>
+        <!-- <button onclick="processLinks()">Paint links black</button>
+        <button onclick="processImages()">Process images</button> -->
         <article>
 
             <h2>Cars are produced in many body styles</h2>

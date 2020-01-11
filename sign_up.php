@@ -15,10 +15,10 @@
 
 
 <body>
-    <nav>
+<nav>
         <ul class="menu">
-            <li><a href="./index.html">Cars</a></li>
-            <li><a href="./body_styles.html">Car Body Styles</a>
+            <li><a href="./index.php">Cars</a></li>
+            <li><a href="./body_styles.php">Car Body Styles</a>
                 <ul>
                     <li><a href="./body_styles.html#Wagon">Wagon</a>
                         <ul>
@@ -36,24 +36,23 @@
                     </li>
                 </ul>
             </li>
-            <li><a href="./engines.html">Engines</a>
+            <li><a href="./engines.php">Engines</a>
                 <ul>
                     <li><a href="#">Diesel</a></li>
                     <li><a href="#">Gasoline</a></li>
                     <li><a href="#">Hybrid</a></li>
                 </ul>
             </li>
-            <li><a href="./contact.html">Contact Us</a>
+            <li><a href="./contact.php">Contact Us</a>
                 <ul>
                     <li><a href="#">Tel</a></li>
                     <li><a href="#">Fax</a></li>
                     <li><a href="#">Mail</a></li>
                 </ul>
             </li>
-            <li><a href="./sign_up.html">Sign up</a></li>
+            <li><a href="./calc.php">Calc</a></li>
         </ul>
     </nav>
-
     
     <a href="./user_details.html">Already have an account?</a>
 

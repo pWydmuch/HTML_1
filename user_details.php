@@ -1,3 +1,15 @@
+
+<?php
+
+session_start();
+
+if (!isset($_SESSION['zalogowany']))
+{
+    header('Location: loguj.php');
+    exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,10 +24,10 @@
 </head>
 
 <body>
-    <nav>
+<nav>
         <ul class="menu">
-            <li><a href="./index.html">Cars</a></li>
-            <li><a href="./body_styles.html">Car Body Styles</a>
+            <li><a href="./index.php">Cars</a></li>
+            <li><a href="./body_styles.php">Car Body Styles</a>
                 <ul>
                     <li><a href="./body_styles.html#Wagon">Wagon</a>
                         <ul>
@@ -33,31 +45,33 @@
                     </li>
                 </ul>
             </li>
-            <li><a href="./engines.html">Engines</a>
+            <li><a href="./engines.php">Engines</a>
                 <ul>
                     <li><a href="#">Diesel</a></li>
                     <li><a href="#">Gasoline</a></li>
                     <li><a href="#">Hybrid</a></li>
                 </ul>
             </li>
-            <li><a href="./contact.html">Contact Us</a>
+            <li><a href="./contact.php">Contact Us</a>
                 <ul>
                     <li><a href="#">Tel</a></li>
                     <li><a href="#">Fax</a></li>
                     <li><a href="#">Mail</a></li>
                 </ul>
             </li>
-            <li><a href="./sign_up.html">Sign up</a></li>
+            <li><a href="./calc.php">Calc</a></li>
+            <li><a href="./cookie.php">Cookie</a></li>
         </ul>
     </nav>
     <section>
-        <h1>User details</h1>
+        <h1 style="margin-top: 60px;">User details</h1>
         <!-- on is default -->
+        <?php echo "<p>Witaj ".$_SESSION['user'].'! [ <a href="logout.php">Wyloguj się!</a> ]</p>';?>
         <form action="#" method="POST">
-            <div class="form-elem">
+            <!-- <div class="form-elem">
                 <label for="my-color">Preferable color:</label>
                 <input type="color" name="color">
-            </div>
+            </div> -->
             <div class="form-elem">
                 <label for="birth-month">Month of birth: </label>
                 <input type="month" id="birth-month" name="birth-month">
