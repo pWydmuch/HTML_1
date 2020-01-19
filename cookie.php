@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +16,9 @@
        
 
         foreach ($_COOKIE as $key => $value )
+        print( "<p>$key: $value</p>" );
+
+        foreach ($_SESSION as $key => $value )
         print( "<p>$key: $value</p>" );
     ?>
 </body>

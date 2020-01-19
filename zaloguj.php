@@ -4,27 +4,42 @@
 	
 	if ((!isset($_POST['login'])) || (!isset($_POST['haslo'])))
 	{
-		header('Location: index.php');
+		header('Location: loguj.php');
 		exit();
 	}
 
+	require_once "connect.php";
 
+	$polaczenie = @new mysqli($host, $db_user, $db_password, $db_name);
+	
+	if ($polaczenie->connect_errno!=0)
+	{
+		echo "Error: ".$polaczenie->connect_errno;
+	}
+	else
+	{
 		$login = $_POST['login'];
 		$haslo = $_POST['haslo'];
-        
-        $users = array("zawisza"=>"czarny", "zbyszko" => "zBogdanca");
-    
-    
-			if(array_key_exists($login, $users) and $users[$login] = $haslo)
+		
+
+	
+		if ($rezultat = @$polaczenie->query(
+		sprintf("SELECT * FROM uzytkownicy WHERE login='%s' AND password='%s'",
+		quotemeta($login),
+		quotemeta($haslo))))
+		{
+			$ilu_userow = $rezultat->num_rows;
+			if($ilu_userow>0)
 			{
 				$_SESSION['zalogowany'] = true;
 				
-			
-				$_SESSION['user'] = $login;
-			
+				$wiersz = $rezultat->fetch_assoc();
+				$_SESSION['id'] = $wiersz['ID'];
+				$_SESSION['user'] = $wiersz['login'];
+
 				
 				unset($_SESSION['blad']);
-
+				$rezultat->free_result();
 				header('Location: user_details.php');
 				
 			} else {
@@ -34,6 +49,9 @@
 				
 			}
 			
-
+		}
+		
+		$polaczenie->close();
+	}
 	
 ?>

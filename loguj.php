@@ -57,6 +57,7 @@
             </li>
             <li><a href="./loguj.php">Log in</a></li>
             <li><a href="./cookie.php">Cookie</a></li>
+            <li><a href="./rejestracja.php">Sign up</a></li>
         </ul>
     </nav>
 

@@ -1,10 +1,8 @@
-
 <?php
 
 session_start();
 
-if (!isset($_SESSION['zalogowany']))
-{
+if (!isset($_SESSION['zalogowany'])) {
     header('Location: loguj.php');
     exit();
 }
@@ -24,7 +22,7 @@ if (!isset($_SESSION['zalogowany']))
 </head>
 
 <body>
-<nav>
+    <nav>
         <ul class="menu">
             <li><a href="./index.php">Cars</a></li>
             <li><a href="./body_styles.php">Car Body Styles</a>
@@ -34,6 +32,7 @@ if (!isset($_SESSION['zalogowany']))
                             <li><a href="#">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
+
                         </ul>
                     </li>
                     <li><a href="./body_styles.html#Sedan">Sedan</a>
@@ -62,37 +61,32 @@ if (!isset($_SESSION['zalogowany']))
             <li><a href="./calc.php">Calc</a></li>
             <li><a href="./cookie.php">Cookie</a></li>
             <li><a href="./zmien.php">Change</a></li>
-            <li><a href="./show-table.php">Table</a></li>
         </ul>
     </nav>
     <section>
-        <h1 style="margin-top: 60px;">User details</h1>
-        <?php echo "<p>Witaj ".$_SESSION['user'].'! [ <a href="logout.php">Wyloguj się!</a> ]</p>';?>
-        <form action="#" method="POST">
-            <div class="form-elem">
-                <label for="birth-month">Month of birth: </label>
-                <input type="month" id="birth-month" name="birth-month">
-            </div>
-            <div class="form-elem">
-                <label for="rate">Rate us: </label>
-                <input type="range" value="100" id="rate" name="rate">
+        <h1 style="margin-top: 60px;">Change user data</h1>
 
-            </div>
-            <div class="form-elem">
-                <label for="search">Search you orders</label>
-                <input type="search" id="search" name="search" placeholder="audi a4">    
-            </div>
-            <div class="form-elem">
-                <label for="url">Url</label>
-                <input type="url" id="url" name="url" placeholder="http://www.wikipedia.org/wiki/URL">
-            </div>
-            <div class="form-elem form-buttons">
-                <input type="submit" value="Send">
-                <input type="reset" value="Reset">
-            </div>
+        <form method="post" action="DB_mod.php">
 
-            <input type="date">
 
+            Change  E-mail: <br /> <input type="text" value="<?php
+                                                        if (isset($_SESSION['fr_email'])) {
+                                                            echo $_SESSION['fr_email'];
+                                                            unset($_SESSION['fr_email']);
+                                                        }
+                                                        ?>" name="email" /><br />
+
+            <?php
+            if (isset($_SESSION['e_email'])) {
+                echo '<div class="error">' . $_SESSION['e_email'] . '</div>';
+                unset($_SESSION['e_email']);
+            }
+            ?>
+
+                  
+            <input type="submit" value="Zmien" />
+            <input type="text" name="change" value="change" style="display: none"> 
+                                                             
         </form>
     </section>
     <footer>All rights reserved &copy;</footer>
